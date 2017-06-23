@@ -68,6 +68,7 @@ namespace Calculator
                     break;
             }
             oprand1 = result.ToString();
+            sndParaHasVal = false;
             latestAnswer = oprand1;
             item.Content = oprand1;
         }
