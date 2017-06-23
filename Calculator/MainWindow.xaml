@@ -1,0 +1,50 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="500" Width="496">
+    <StackPanel Margin="0,0,-0.4,0" Opacity="1" Height="464" VerticalAlignment="Top">
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="484" Background="#FF989898">
+            <Button Click="Button_Click" BorderBrush="#FF989898" Background="#FF989898" Content="About" Foreground="Black" FontSize="18" Height="28" Width="60"/>
+        </Menu>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="113" Margin="0,0,0,0" VerticalAlignment="Top" Width="484" Background="#FFF1EDED" BorderBrush="{x:Null}" Opacity="0.5">
+            <ListBoxItem x:Name="item" Height="113" FontSize="36" HorizontalAlignment="Right" FontFamily="Consolas" Content="Initial" Margin="0,0,0,0" Width="480" Opacity="2" HorizontalContentAlignment="Right"/>
+        </ListBox>
+        <WrapPanel Margin="0,0,0,0">
+            <Button x:Name="button1" Click="button1_Click" Content="1" HorizontalAlignment="Left" Height="80" Margin="0,0,0,0" VerticalAlignment="Top" Width="80" Background="#FF39C5BB" BorderBrush="{x:Null}" FontSize="24"/>
+            <Button x:Name="button2" Click="button2_Click" Content="2" HorizontalAlignment="Left" Height="80" Margin="0,0,0,0" VerticalAlignment="Top" Width="80" Background="#FFF9F6F6" BorderBrush="{x:Null}" FontSize="24"/>
+            <Button x:Name="button3" Click="button3_Click" Content="3" HorizontalAlignment="Left" Height="80" Margin="0,0,0,0" VerticalAlignment="Top" Width="80" Background="#FFF9F6F6" BorderBrush="{x:Null}" FontSize="24"/>
+            <Button x:Name="buttonPlus" Click="buttonPlus_Click" Content="+" Height="80" Width="80" BorderBrush="{x:Null}" Background="#FFF9F6F6" Margin="0,0,0,0" FontSize="24"/>
+            <Button x:Name="buttonClear" Click="buttonClear_Click" Content="Clr" Height="80" Width="80" Margin="0,0,0,0" BorderBrush="{x:Null}" Background="#FFF9F6F6" FontSize="20" />
+            <Button x:Name="buttonLatestAnswer" Click="buttonLatestAnswer_Click" Content="↑" Width="80" Height="80" BorderBrush="{x:Null}" Background="#FFF9F6F6" FontSize="24" />
+        </WrapPanel>
+        <WrapPanel Margin="0,0,0,0">
+            <Button x:Name="button4" Click="button4_Click" Content="4" HorizontalAlignment="Left" Height="80" Margin="0,0,0,0" VerticalAlignment="Top" Width="80" Background="#FF39C5BB" BorderBrush="{x:Null}" FontSize="24" />
+            <Button x:Name="button5" Click="button5_Click" Content="5" Height="80" Width="80" Margin="0,0,0,0" BorderBrush="{x:Null}" Background="#FFF9F6F6" FontSize="24" />
+            <Button x:Name="button6" Click="button6_Click" Content="6" Height="80" Width="80" Margin="0,0,0,0" BorderBrush="{x:Null}" Background="#FFF9F6F6" FontSize="24" />
+            <Button x:Name="buttonMinus" Click="buttonMinus_Click" Content="-" Height="80" Width="80" Margin="0,0,0,0" BorderBrush="{x:Null}" Background="#FFF9F6F6" FontSize="24"/>
+            <Button x:Name="buttonPercent" Click="buttonPercent_Click" Content="%" Height="80" Width="80" Margin="0,0,0,0" BorderBrush="{x:Null}" Background="#FFF9F6F6" FontSize="24"/>
+            <Button x:Name="buttonSquare" Click="buttonSquare_Click" Content="√" Height="80" Width="80" Margin="0,0,0,0" BorderBrush="{x:Null}" Background="#FFF9F6F6" FontSize="24"/>
+        </WrapPanel>
+        <WrapPanel Margin="0,0,0,0">
+            <Button x:Name="button7" Click="button7_Click" Content="7" Height="80" Width="80" Margin="0,0,0,0" BorderBrush="{x:Null}" Background="#FF39C5BB" FontSize="24"/>
+            <Button x:Name="button8" Click="button8_Click" Content="8" Height="80" Width="80" Margin="0,0,0,0" Background="#FF39C5BB" BorderBrush="{x:Null}" FontSize="24" />
+            <Button x:Name="button9" Click="button9_Click" Content="9" Height="80" Width="80" Margin="0,0,0,0" Background="#FFF9F6F6" BorderBrush="{x:Null}" FontSize="24" />
+            <Button x:Name="buttonMul" Click="buttonMul_Click" Content="x" Height="80" Width="80" Margin="0,0,0,0" BorderBrush="{x:Null}" Background="#FF39C5BB" FontSize="24"/>
+            <Button x:Name="buttonPower" Click="buttonPower_Click" Content="^" Height="80" Width="80" Margin="0,0,0,0" Background="#FF39C5BB" BorderBrush="{x:Null}" FontSize="24"/>
+            <Button x:Name="buttonLn" Click="buttonLn_Click" Content="ln" Height="80" Width="80" Margin="0,0,0,0" Background="#FF39C5BB" BorderBrush="{x:Null}" FontSize="20" />
+        </WrapPanel>
+        <WrapPanel>
+            <Button x:Name="buttonDot" Click="buttonDot_Click" Content="." Height="80" Width="80" Margin="0,0,0,0" BorderBrush="{x:Null}" Background="#FF39C5BB" FontSize="24"/>
+            <Button x:Name="button0" Click="button0_Click" Content="0" Height="80" Width="80" Margin="0,0,0,0" BorderBrush="{x:Null}" Background="#FFF9F6F6" FontSize="24" />
+            <Button x:Name="buttonEq" Click="buttonEq_Click" Content="=" Height="80" Width="80" Margin="0,0,0,0" BorderBrush="{x:Null}" Background="#FF39C5BB" FontSize="24" />
+            <Button x:Name="buttonDIv" Click="buttonDIv_Click" Content="/" Height="80" Width="80" Margin="0,0,0,0" BorderBrush="{x:Null}" Background="#FFF9F6F6" FontSize="24"/>
+            <Button x:Name="buttonFib" Click="buttonFib_Click" Content="!" Height="80" Width="80" Margin="0,0,0,0" Background="#FF39C5BB" BorderBrush="{x:Null}" FontSize="24" />
+            <Button x:Name="buttonUnknown" Click="buttonUnknown_Click" Content="?" Height="80" Width="80" Background="#FF39C5BB" FontSize="24" BorderBrush="{x:Null}"/>
+        </WrapPanel>
+
+    </StackPanel>
+</Window>
